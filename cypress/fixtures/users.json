@@ -1,0 +1,18 @@
+{
+  "validEmailUser": {
+    "login": "williambranquinho@gmail.com",
+    "password": "SmM@27122012EmJ"
+  },
+  "validCpfUser": {
+    "login": "10916279677",
+    "password": "SmM@27122012EmJ"
+  },
+  "invalidPasswordEmailUser": {
+    "login": "williambranquinho@gmail.com",
+    "password": "12345678"
+  },
+  "invalidPasswordCPFUser": {
+  "login": "10916279677",
+  "password": "12345678"
+  }
+}
