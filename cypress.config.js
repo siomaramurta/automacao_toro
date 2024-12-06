@@ -2,22 +2,18 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://app.toroinvestimentos.com.br',
-    viewportWidth: 1280,
-    viewportHeight: 720,
-    defaultCommandTimeout: 10000,
-    video: true,
-    screenshotOnRunFailure: true,
     setupNodeEvents(on, config) {
-      require('mochawesome/register');
+      require('cypress-mochawesome-reporter/plugin')(on);
       return config;
     },
-    reporter: 'mochawesome',
-    reporterOptions: {
-      reportDir: 'cypress/reports/mochawesome',
-      overwrite: false,
-      html: false,
-      json: true,
-    },
+    baseUrl: 'https://app.toroinvestimentos.com.br', 
+    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}', 
+  },
+  reporter: 'cypress-mochawesome-reporter', 
+  reporterOptions: {
+    reportDir: 'cypress/reports/mochawesome',
+    overwrite: false,
+    html: true,
+    json: true,
   },
 });

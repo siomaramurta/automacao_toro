@@ -1,6 +1,11 @@
 import LoginPage from '../../pages/loginPage';
 import '../../support/commands';
 
+// OBS: A validação dos cenários de login com credenciais corretas foram realizados com base em um usuário que não finalizou 
+// o cadastro na plataforma. Cheguei a conseguir, de fato, logar com o e-mail e senha deste usuário apenas 1 vez. Após deslogar 
+// e logar novamente, não consegui mais logar e o drawer solicitando o token passou a ser exibido. Dessa forma, estes
+// cenários foram realizados considerando que o fluxo esperado seria a visualização do drawer.
+
 const loginPage = new LoginPage();
 
 describe('Login na plataforma Toro Investimentos', () => {
